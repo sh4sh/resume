@@ -10,7 +10,12 @@ body {
 /*
   Common component styles
 */
-.rightColumn .jobTitle, .rightColumn .degreeTitle, .rightColumn .outreachTitle, .leftColumn .companyName, .leftColumn .schoolName, .leftColumn .projectName, .leftColumn .outreachName, .header .contactName, .sectionHeader {
+.rightColumn .jobTitle,
+.rightColumn .degreeTitle,
+.rightColumn .outreachTitle, .leftColumn .companyName,
+.leftColumn .schoolName,
+.leftColumn .projectName,
+.leftColumn .outreachName, .header .contactName, .sectionHeader {
   font-weight: 600;
   font-family: "Yantramanav", sans-serif;
   font-size: 1em;
@@ -18,7 +23,10 @@ body {
   text-transform: capitalize;
 }
 
-.rightColumn .jobDescription, .rightColumn .projectDescription, .rightColumn .degreeDescription, .rightColumn .outreachDescription, .leftColumn .dateRange, .header .contactDetails a, .description {
+.rightColumn .jobDescription,
+.rightColumn .projectDescription,
+.rightColumn .degreeDescription,
+.rightColumn .outreachDescription, .leftColumn .dateRange, .header .contactDetails a, .description {
   font-weight: 500;
   font-family: "Khula", sans-serif;
   font-size: 0.95em;
@@ -31,6 +39,8 @@ body {
   text-transform: uppercase;
   color: #008080;
   margin-bottom: -5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .accent {
@@ -118,13 +128,15 @@ body {
   grid-gap: 0.5em;
 }
 
-.experienceSection, .projectsSection {
+.experienceSection,
+.projectsSection {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 0.5em;
 }
 
-.experienceItem, .projectItem {
+.experienceItem,
+.projectItem {
   display: grid;
   grid-template-columns: minmax(auto, 135px) 1fr;
   grid-template-areas: "title description";
@@ -169,17 +181,25 @@ body {
     grid-template-columns: minmax(auto, 180px) 1fr;
   }
 
-  .leftColumn .companyName, .leftColumn .schoolName, .leftColumn .projectName, .leftColumn .outreachName {
+  .leftColumn .companyName,
+  .leftColumn .schoolName,
+  .leftColumn .projectName,
+  .leftColumn .outreachName {
     font-size: 14px;
   }
   .leftColumn .dateRange {
     font-size: 12px;
   }
 
-  .rightColumn .jobTitle, .rightColumn .degreeTitle, .rightColumn .outreachTitle {
+  .rightColumn .jobTitle,
+  .rightColumn .degreeTitle,
+  .rightColumn .outreachTitle {
     font-size: 14px;
   }
-  .rightColumn .jobDescription, .rightColumn .projectDescription, .rightColumn .degreeDescription, .rightColumn .outreachDescription {
+  .rightColumn .jobDescription,
+  .rightColumn .projectDescription,
+  .rightColumn .degreeDescription,
+  .rightColumn .outreachDescription {
     font-size: 12px;
   }
 }
