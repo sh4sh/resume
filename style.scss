@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Khula|Telex|Yantramanav");
+@import url('https://fonts.googleapis.com/css?family=Khula|Telex|Yantramanav');
 
 body {
   padding: 0;
@@ -22,7 +22,7 @@ $smallSpacing: 0.5em;
 */
 %headerPrimary {
   font-weight: 600;
-  font-family: "Yantramanav", sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   font-size: $headerPrimarySize;
   color: $textPrimaryColor;
   text-transform: capitalize;
@@ -30,7 +30,7 @@ $smallSpacing: 0.5em;
 
 %bodyPrimary {
   font-weight: 500;
-  font-family: "Khula", sans-serif;
+  font-family: 'Khula', sans-serif;
   font-size: 0.95em;
   color: $textSecondaryColor;
 }
@@ -42,8 +42,6 @@ $smallSpacing: 0.5em;
   text-transform: uppercase;
   color: $headerPrimaryColor;
   margin-bottom: -5px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .description {
@@ -105,18 +103,18 @@ $smallSpacing: 0.5em;
 //   & > .leftColumn {
 //     grid-area: left;
 
-//     .speakingSection {
+//     .outreachSection {
 //       display: grid;
 //       grid-auto-rows: min-content;
 //       grid-gap: 0.5em;
-
-//       .speakingItem {
+  
+//       .outreachItem {
 //         display: grid;
-//         grid-template-columns: 180px 1fr;
+//         grid-template-columns: 135px 1fr;
 //         grid-template-areas: "title description";
 //         grid-gap: 1em;
 //       }
-//     }
+//     }  
 //   }
 
 //   & > .rightColumn {
@@ -128,7 +126,7 @@ $smallSpacing: 0.5em;
 //       display: grid;
 //       grid-auto-rows: min-content;
 //       grid-gap: 0.5em;
-
+  
 //       .educationItem {
 //         display: grid;
 //         grid-template-columns: 170px 1fr;
@@ -150,37 +148,35 @@ $smallSpacing: 0.5em;
   flex-wrap: wrap;
 
   & > .leftColumn {
-    flex-basis: 200px;
+    flex-basis: 0px;
     flex-grow: 9999;
     margin: 0 1em 1em 0;
 
-    .speakingSection {
+    .outreachSection {
       display: grid;
       grid-auto-rows: min-content;
       grid-gap: $smallSpacing;
-
-      .speakingItem {
-        display: flex;
-        flex-direction: column;
-        // display: grid;
-        // grid-template-columns: 180px 1fr;
-        // grid-template-areas: "title description";
-        // grid-gap: $primarySpacing;
+  
+      .outreachItem {
+        display: grid;
+        grid-template-columns: 135px 1fr;
+        grid-template-areas: "title description";
+        grid-gap: $primarySpacing;
       }
-    }
+    }  
   }
 
   & > .rightColumn {
-    flex-basis: 100px;
-    flex-grow: 1;
-    min-width: 350px;
+    flex-basis:100px;
+    flex-grow:1;
+    min-width: 300px;
 
     .educationSection {
       display: grid;
       grid-auto-rows: min-content;
       grid-gap: $smallSpacing;
       margin-bottom: $primarySpacing;
-
+  
       .educationItem {
         display: grid;
         grid-template-columns: 170px 1fr;
@@ -197,15 +193,13 @@ $smallSpacing: 0.5em;
   }
 }
 
-.experienceSection,
-.projectsSection {
+.experienceSection, .projectsSection {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: $smallSpacing;
 }
 
-.experienceItem,
-.projectItem {
+.experienceItem, .projectItem {
   display: grid;
   grid-template-columns: minmax(auto, 135px) 1fr;
   grid-template-areas: "title description";
@@ -216,23 +210,14 @@ $smallSpacing: 0.5em;
   display: flex;
   flex-direction: column;
 
-  .companyName,
-  .schoolName,
-  .projectName,
-  .speakingName {
+  .companyName, .schoolName, .projectName, .outreachName {
     @extend %headerPrimary;
   }
 
   .dateRange {
     @extend %bodyPrimary;
+    text-transform: uppercase;
     font-size: 0.85em;
-  }
-
-  a {
-    @extend %bodyPrimary;
-    font-size: 0.85em;
-    text-transform: lowercase;
-    text-decoration: none;
   }
 }
 
@@ -247,9 +232,7 @@ $smallSpacing: 0.5em;
     list-style-type: square;
   }
 
-  .jobTitle,
-  .degreeTitle,
-  .speakingTitle {
+  .jobTitle, .degreeTitle, .outreachTitle {
     @extend %headerPrimary;
   }
 
@@ -257,10 +240,7 @@ $smallSpacing: 0.5em;
     margin-top: 10px;
   }
 
-  .jobDescription,
-  .projectDescription,
-  .degreeDescription,
-  .speakingDescription {
+  .jobDescription, .projectDescription, .degreeDescription, .outreachDescription  {
     @extend %bodyPrimary;
   }
 }
@@ -289,10 +269,7 @@ $smallSpacing: 0.5em;
   }
 
   .leftColumn {
-    .companyName,
-    .schoolName,
-    .projectName,
-    .speakingName {
+    .companyName, .schoolName, .projectName, .outreachName {
       font-size: 14px;
     }
 
@@ -302,16 +279,11 @@ $smallSpacing: 0.5em;
   }
 
   .rightColumn {
-    .jobTitle,
-    .degreeTitle,
-    .speakingTitle {
+    .jobTitle, .degreeTitle, .outreachTitle {
       font-size: 14px;
     }
 
-    .jobDescription,
-    .projectDescription,
-    .degreeDescription,
-    .speakingDescription {
+    .jobDescription, .projectDescription, .degreeDescription, .outreachDescription {
       font-size: 12px;
     }
   }
